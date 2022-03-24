@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderSpotify />
+    <MainSpotify />
+    <CardDisc />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderSpotify from './components/HeaderSpotify.vue';
+import MainSpotify from './components/MainSpotify.vue';
+import CardDisc from './components/CardDisc.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderSpotify,
+    MainSpotify,
+    CardDisc,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "~bootstrap/scss/bootstrap";
+  
 </style>
