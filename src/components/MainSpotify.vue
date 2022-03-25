@@ -1,6 +1,6 @@
 <template>
-  <main class="bg-primary">
-    <div class="container">
+  <main class="container-fluid">
+    <div class="container d-flex pt-5 px-5">
       <CardDisc />
     </div>
   </main>
@@ -18,4 +18,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/partials/variables.scss';
+main{
+  height: 100hv;
+  widows: 100%;
+  background-color: $bg-color;
+  color: white;
+}
+
 </style>
