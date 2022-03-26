@@ -1,15 +1,20 @@
 <template>
-  <div class="card-album flex-row text-center col-6 col-md-4 col-lg-3">
-      <img class="img-fluid" src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-      <h2 class="pt-4">new jersey</h2>
-      <h3 class="pt-2">Bon Jovi</h3>
-      <h4>1988</h4>
-  </div>
+  <div class="card-album flex-row text-center">
+  
+      <img class="img-fluid" :src="albumData.poster" :alt="albumData.title">
+      <h2 class="pt-4">{{ albumData.title }}</h2>
+      <h3 class="pt-2">{{ albumData.author }}</h3>
+      <h4>{{ albumData.year }}</h4>
+      </div>
+  
 </template>
 
 <script>
 export default {
-    name: 'CardDisc'
+    name: 'CardDisc',
+    props: {
+      albumData: Object // è album-data del main 
+    }
 }
 </script>
 
@@ -18,6 +23,7 @@ export default {
   .card-album{
     background-color: $primary-color;
     padding: 10px;
+    // margin: 10px;
     img{
       // width: 150px;
     }
